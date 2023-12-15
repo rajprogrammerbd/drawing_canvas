@@ -1,0 +1,8 @@
+{
+  "name": "drawing_canvas",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/rajprogrammerbd/drawing_canvas.git",
+  "author": "Raj Dutta <rd2249619@gmail.com>",
+  "license": "MIT"
+}
