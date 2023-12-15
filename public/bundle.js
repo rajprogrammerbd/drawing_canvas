@@ -26,7 +26,7 @@ eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nclas
   \*********************************/
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
-eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nexports.UISystem = void 0;\nconst DOM_1 = __importDefault(__webpack_require__(/*! ./DOM */ \"./src/classes/DOM.ts\"));\nclass UISystem extends DOM_1.default {\n    constructor() {\n        super();\n    }\n}\nexports.UISystem = UISystem;\n\n\n//# sourceURL=webpack://drawing_canvas/./src/classes/UISystem.ts?");
+eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nexports.UISystem = void 0;\nconst DOM_1 = __importDefault(__webpack_require__(/*! ./DOM */ \"./src/classes/DOM.ts\"));\nclass UISystem extends DOM_1.default {\n    constructor() {\n        super();\n        this.createCanvas();\n    }\n}\nexports.UISystem = UISystem;\n\n\n//# sourceURL=webpack://drawing_canvas/./src/classes/UISystem.ts?");
 
 /***/ }),
 
