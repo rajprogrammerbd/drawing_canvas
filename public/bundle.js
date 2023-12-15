@@ -30,13 +30,23 @@ eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {
 
 /***/ }),
 
+/***/ "./src/classes/store.ts":
+/*!******************************!*\
+  !*** ./src/classes/store.ts ***!
+  \******************************/
+/***/ ((__unused_webpack_module, exports) => {
+
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nlet init = false;\nclass Store {\n    constructor() {\n        if (init) {\n            throw new Error(\"You can't create multiple instance\");\n        }\n        this.data = {};\n    }\n    push(key, value) {\n        if (this.data[key]) {\n            throw new Error(\"key is stored already\");\n        }\n        this.data[key] = value;\n    }\n}\nexports[\"default\"] = Store;\n\n\n//# sourceURL=webpack://drawing_canvas/./src/classes/store.ts?");
+
+/***/ }),
+
 /***/ "./src/index.ts":
 /*!**********************!*\
   !*** ./src/index.ts ***!
   \**********************/
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst UISystem_1 = __webpack_require__(/*! ./classes/UISystem */ \"./src/classes/UISystem.ts\");\nwindow.addEventListener('DOMContentLoaded', () => {\n    new UISystem_1.UISystem();\n});\n\n\n//# sourceURL=webpack://drawing_canvas/./src/index.ts?");
+eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst UISystem_1 = __webpack_require__(/*! ./classes/UISystem */ \"./src/classes/UISystem.ts\");\nconst store_1 = __importDefault(__webpack_require__(/*! ./classes/store */ \"./src/classes/store.ts\"));\n(function () {\n    const store = new store_1.default();\n    window.store = store;\n    window.addEventListener('DOMContentLoaded', () => {\n        new UISystem_1.UISystem();\n    });\n    window.addEventListener('resize', () => {\n        new UISystem_1.UISystem();\n    });\n})();\n\n\n//# sourceURL=webpack://drawing_canvas/./src/index.ts?");
 
 /***/ })
 
@@ -70,7 +80,7 @@ eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\ncons
 /******/ 	
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
-/******/ 	// This entry module can't be inlined because the eval devtool is used.
+/******/ 	// This entry module is referenced by other modules so it can't be inlined
 /******/ 	var __webpack_exports__ = __webpack_require__("./src/index.ts");
 /******/ 	
 /******/ })()
